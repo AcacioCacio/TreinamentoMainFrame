@@ -1,0 +1,34 @@
+       IDENTIFICATION                            DIVISION.              00010000
+       PROGRAM-ID.  FR09CB08.                                           00020000
+      *===================================================              00030000
+      *     AUTOR   : ACACIO JORGE                                      00040000
+      *     EMPRESA : FOURSYS                                           00050000
+      *     DATA    : 20/04/2022                                        00060000
+      *     OBJETIVO: USO DE ADD - AULA                                 00070000
+      *===================================================              00080000
+      *ENVIROMENT                                DIVISION.              00081000
+      *===================================================              00081100
+       DATA                                      DIVISION.              00081200
+      *===================================================              00081300
+       WORKING-STORAGE                            SECTION.              00081400
+      *===================================================              00081500
+       01 WRK-ACCEPT.                                                   00083000
+          05 N1           PIC 99              VALUE ZEROS.              00083100
+          05 N2           PIC 99              VALUE ZEROS.              00083200
+          05 RES          PIC 999             VALUE ZEROS.              00083300
+      *===================================================              00083400
+       PROCEDURE                                 DIVISION.              00083500
+      *===================================================              00083600
+           ACCEPT WRK-ACCEPT FROM SYSIN.                                00083700
+      *-----------ADD COM GIVING                                        00083800
+            ADD N1 N2 GIVING RES.                                       00083900
+            DISPLAY 'A SOMA DE   '  N1                                  00084000
+            DISPLAY ' COM        '  N2                                  00084100
+            DISPLAY ' RESULTOU = '  RES.                                00084200
+      *-----------ADD COM TO                                            00084300
+            ADD N1 N2 TO RES.                                           00084400
+            DISPLAY 'A SOMA DE   '  N1                                  00084500
+            DISPLAY ' COM        '  N2                                  00084600
+            DISPLAY ' RESULTOU = '  RES.                                00084700
+           STOP RUN.                                                    00084800
+

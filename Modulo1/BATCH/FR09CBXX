@@ -1,0 +1,21 @@
+       IDENTIFICATION                            DIVISION.              00010000
+       PROGRAM-ID.  FR09CBXX.                                           00020002
+      *==========================================                       00030000
+      *     AUTOR   : ACACIO JORGE                                      00040000
+      *     EMPRESA : FOURSYS                                           00050000
+      *     DATA    : 19/04/2022                                        00060000
+      *     OBJETIVO: TESTE COM FILLER                                  00070001
+      *==========================================                       00080000
+      *ENVIROMENT                                DIVISION.              00081000
+       DATA                                      DIVISION.              00082000
+       WORKING-STORAGE                            SECTION.              00082100
+       01 WRK-DADO.                                                     00082200
+          05 WRK-NOME      PIC X(20)         VALUE SPACES.              00082301
+          05 FILLER        PIC X(10)         VALUE SPACES.              00082401
+          05 WRK-CARGO     PIC X(15)         VALUE SPACES.              00082501
+       PROCEDURE                                 DIVISION.              00082700
+           ACCEPT WRK-DADO FROM SYSIN.                                  00082801
+           DISPLAY 'NOME....: ' WRK-NOME                                00082901
+           DISPLAY 'CARGO...: ' WRK-CARGO.                              00083001
+           STOP RUN.                                                    00084600
+

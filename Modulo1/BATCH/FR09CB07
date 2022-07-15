@@ -1,0 +1,43 @@
+       IDENTIFICATION                            DIVISION.              00010000
+       PROGRAM-ID.  FR09CB07.                                           00020012
+      *===================================================              00030000
+      *     AUTOR   : ACACIO JORGE                                      00040000
+      *     EMPRESA : FOURSYS                                           00050000
+      *     DATA    : 20/04/2022                                        00060000
+      *     OBJETIVO: EXERCICIO REDEFINES                               00070003
+      *===================================================              00080000
+      *ENVIROMENT                                DIVISION.              00081000
+      *===================================================              00081100
+       DATA                                      DIVISION.              00082000
+      *===================================================              00082100
+       WORKING-STORAGE                            SECTION.              00082200
+      *===================================================              00082300
+       01 REGISTRO.                                                     00082409
+          05 WRK-NOME    PIC X(15)           VALUE SPACES.              00082508
+          05 WRK-RUA     PIC X(15)           VALUE SPACES.              00082608
+          05 WRK-NUM     PIC 9(05)            VALUE ZEROS.              00082708
+          05 WRK-BAIRRO  PIC X(10)           VALUE SPACES.              00082808
+                                                                        00082900
+       01 WRK-NOME-S     REDEFINES           REGISTRO.                  00083002
+          05 WRK-NOME    PIC X(15).                                     00083101
+          05 FILLER      PIC X(30)  VALUE SPACES.                       00083210
+                                                                        00083300
+       01 WRK-END-S      REDEFINES           REGISTRO.                  00083411
+          05 FILLER      PIC X(15).                                     00083507
+          05 WRK-ENDERECO                                               00083611
+             10 WRK-RUA     PIC X(15).                                  00083711
+             10 WRK-NUM     PIC ZZZZZ.                                  00083811
+             10 WRK-BAIRRO  PIC X(10).                                  00083911
+      *===================================================              00084000
+       PROCEDURE                                 DIVISION.              00084100
+      *===================================================              00084200
+           ACCEPT REGISTRO FROM SYSIN.                                  00084300
+           DISPLAY '===================================='               00084400
+           DISPLAY 'REGISTRO COMPLETO: ' REGISTRO                       00084505
+           DISPLAY '===================================='               00084600
+           DISPLAY 'NOME.............: ' WRK-NOME OF WRK-NOME-S         00084711
+           DISPLAY '===================================='               00084800
+           DISPLAY 'ENDERECO.........: ' WRK-ENDERECO OF WRK-END-S      00084911
+           DISPLAY '===================================='.              00085000
+           STOP RUN.                                                    00086000
+

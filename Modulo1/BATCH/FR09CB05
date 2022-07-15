@@ -1,0 +1,35 @@
+       IDENTIFICATION                            DIVISION.              00010000
+       PROGRAM-ID.  FR09CB05.                                           00020000
+      *==========================================                       00030000
+      *     AUTOR   : ACACIO JORGE                                      00040000
+      *     EMPRESA : FOURSYS                                           00050000
+      *     DATA    : 19/04/2022                                        00060000
+      *     OBJETIVO: TESTE COM VARIAVEL BINARIA                        00070000
+      *==========================================                       00080000
+      *ENVIROMENT                                DIVISION.              00081000
+       DATA                                      DIVISION.              00082000
+       WORKING-STORAGE                            SECTION.              00082100
+       77 WRK-VLR         PIC X(05).                                    00082206
+       77 WRK-VLRCOMP     PIC S9(05) COMP-3   VALUE ZEROS.              00082304
+       77 WRK-VLREDIT     PIC -ZZZZZ          VALUE ZEROS.              00082411
+       PROCEDURE                                 DIVISION.              00082800
+           ACCEPT WRK-VLR FROM SYSIN.                                   00082900
+           MOVE WRK-VLR TO WRK-VLRCOMP.                                 00083000
+           ADD 1 TO WRK-VLRCOMP.                                        00083100
+           DISPLAY 'MEU QUINTO PROGRAMA - FR09CB05'.                    00083202
+           DISPLAY 'RESULTADO1..: ' WRK-VLRCOMP.                        00083302
+           DISPLAY '==========================='.                       00083500
+           ADD 1 TO WRK-VLRCOMP.                                        00083607
+           DISPLAY 'RESULTADO2..: ' WRK-VLRCOMP.                        00083702
+           DISPLAY '==========================='.                       00083800
+           ADD 1 TO WRK-VLRCOMP.                                        00083907
+           DISPLAY 'RESULTADO3..: ' WRK-VLRCOMP.                        00084002
+           DISPLAY '==========================='.                       00084102
+           MOVE WRK-VLRCOMP TO WRK-VLR.                                 00084205
+           DISPLAY 'RESULTADO4: ' WRK-VLR.                              00084309
+           DISPLAY '==========================='.                       00084409
+           MOVE WRK-VLRCOMP TO WRK-VLREDIT.                             00084509
+           DISPLAY 'RESULTADO MASCARA: ' WRK-VLREDIT.                   00084612
+           DISPLAY '==========================='.                       00084709
+           STOP RUN.                                                    00085000
+

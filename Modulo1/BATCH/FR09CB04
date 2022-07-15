@@ -1,0 +1,28 @@
+       IDENTIFICATION                            DIVISION.              00010000
+       PROGRAM-ID.  FR09CB04.                                           00020000
+      *==========================================                       00030000
+      *     AUTOR   : ACACIO JORGE                                      00040000
+      *     EMPRESA : FOURSYS                                           00050000
+      *     DATA    : 19/04/2022                                        00060000
+      *     OBJETIVO: DESAFIO NO USO DE NIVEIS                          00070000
+      *==========================================                       00080000
+      *ENVIROMENT                                DIVISION.              00081000
+       DATA                                      DIVISION.              00082000
+       WORKING-STORAGE                            SECTION.              00082100
+       01 WRK-REGISTRO.                                                 00082200
+          05 WRK-ID         PIC 9(005)        VALUE ZEROS.              00082300
+          05 WRK-NOME       PIC X(030)       VALUE SPACES.              00082400
+          05 WRK-INTERNO.                                               00082500
+             10 WRK-TEL     PIC 9(010)        VALUE ZEROS.              00082600
+             10 WRK-MANAGER PIC X(015)       VALUE SPACES.              00082700
+       PROCEDURE                                 DIVISION.              00082800
+           ACCEPT WRK-REGISTRO FROM SYSIN.                              00082900
+           DISPLAY 'MEU QUARTO PROGRAMA - FR09CB04'.                    00083100
+           DISPLAY 'ID.........- ' WRK-ID.                              00083201
+           DISPLAY 'NOME.......- ' WRK-NOME.                            00083301
+           DISPLAY 'TELEFONE...- ' WRK-TEL.                             00083401
+           DISPLAY 'GERENTE....- ' WRK-MANAGER.                         00083501
+           DISPLAY '==========================='.                       00083601
+           DISPLAY WRK-REGISTRO.                                        00083701
+           STOP RUN.                                                    00084000
+

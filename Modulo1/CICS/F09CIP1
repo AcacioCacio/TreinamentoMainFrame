@@ -1,0 +1,84 @@
+       IDENTIFICATION               DIVISION.                           00010000
+                                                                        00011001
+       PROGRAM-ID. FIVCIP1.                                             00020001
+                                                                        00021001
+       DATA                         DIVISION.                           00030000
+                                                                        00031001
+       WORKING-STORAGE              SECTION.                            00040000
+           COPY F09CIM1.                                                00050001
+       77 WRK-SAIDA               PIC X(30)                VALUE SPACES.00051001
+                                                                        00052000
+       PROCEDURE                    DIVISION.                           00060000
+           EXEC CICS SEND                                               00070000
+             MAPSET('F09CIM1')                                          00080001
+             MAP('MAPTEST')                                             00090000
+             ERASE                                                      00091000
+             MAPONLY                                                    00100000
+           END-EXEC.                                                    00120000
+                                                                        00121000
+           EXEC CICS RECEIVE                                            00121100
+             MAPSET('F09CIM1')                                          00121201
+             MAP('MAPTEST')                                             00122000
+             INTO(MAPTESTI)                                             00123000
+           END-EXEC.                                                    00124000
+                                                                        00125000
+            IF IDI EQUAL '00001'                                        00125101
+             MOVE 'PENELOPE CHARMOSA '      TO NOMEO                    00126003
+             MOVE 'DPTI'                    TO SETORO                   00126103
+             MOVE 4000000                   TO SALARIOO                 00126203
+             MOVE '17/06/2022'              TO DATAADMO                 00126303
+             MOVE 'PENECHARME@GMAIL.COM'    TO EMAILO                   00126403
+             MOVE 'REG ENCONTRADO'          TO MSGO                     00126503
+            END-IF.                                                     00126600
+                                                                        00126700
+            IF IDI EQUAL '00002'                                        00126800
+             MOVE 'MANO BROWN JR.'          TO NOMEO                    00126903
+             MOVE 'DPRH'                    TO SETORO                   00127003
+             MOVE 0350000                   TO SALARIOO                 00127103
+             MOVE '10/05/2010'              TO DATAADMO                 00127203
+             MOVE 'JRBROWN@GMAIL.COM'       TO EMAILO                   00127303
+             MOVE 'ACHEI VOCE'              TO MSGO                     00127403
+            END-IF.                                                     00127500
+                                                                        00127600
+            IF IDI EQUAL '00003'                                        00127702
+             MOVE 'IVAN SANCHES'            TO NOMEO                    00127803
+             MOVE 'MKT'                     TO SETORO                   00127903
+             MOVE 4700000                   TO SALARIOO                 00128003
+             MOVE '11/11/2011'              TO DATAADMO                 00128103
+             MOVE 'IVSANCHES@GMAIL.COM'     TO EMAILO                   00128203
+             MOVE 'REG ENCONTRADO'          TO MSGO                     00128403
+            END-IF.                                                     00128502
+                                                                        00128602
+            IF IDI EQUAL '00004'                                        00128702
+             MOVE 'NEYMAR JUNIOR'           TO NOMEO                    00128803
+             MOVE 'MKT'                     TO SETORO                   00128903
+             MOVE 5555555                   TO SALARIOO                 00129003
+             MOVE '07/07/2007'              TO DATAADMO                 00129103
+             MOVE 'MENINONEY@GMAIL.COM'     TO EMAILO                   00129203
+             MOVE 'REG ENCONTRADO'          TO MSGO                     00129303
+            END-IF.                                                     00129402
+                                                                        00129502
+            IF IDI EQUAL '00005'                                        00129603
+             MOVE 'VALESCA LITTLE POPO'      TO NOMEO                   00129703
+             MOVE 'MKT'                      TO SETORO                  00129803
+             MOVE 0001055                    TO SALARIOO                00129903
+             MOVE '25/01/2012'               TO DATAADMO                00130004
+             MOVE 'BEIJOABRACO@GMAIL.COM'    TO EMAILO                  00130104
+             MOVE 'BEIJINHO NO OMBRO'        TO MSGO                    00130304
+            END-IF.                                                     00130404
+                                                                        00130603
+           EXEC CICS SEND                                               00130700
+             MAPSET('F09CIM1')                                          00130802
+             MAP('MAPTEST')                                             00130900
+             DATAONLY                                                   00131000
+           END-EXEC.                                                    00131100
+                                                                        00131200
+                                                                        00131300
+             MOVE 'END OF PROGRAM - BYE ' TO WRK-SAIDA.                 00131402
+                                                                        00131500
+                                                                        00132000
+           EXEC CICS                                                    00140000
+             RETURN                                                     00150000
+           END-EXEC.                                                    00160000
+                                                                        00170000
+                                                                        00180000

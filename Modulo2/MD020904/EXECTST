@@ -1,0 +1,10 @@
+//FOUR009X JOB 'EXEC COB',CLASS=C,MSGCLASS=X,NOTIFY=&SYSUID,TIME=(0,01)
+//********************************************************************
+//* EXECUTAR PROGRAMA FOUR009XX                                      *
+//********************************************************************
+//STEP01   EXEC PGM=MD020904
+//STEPLIB  DD   DSN=GR.GERAL.LOADLIB,DISP=SHR
+//JCLEVSA  DD   DSN=GR.FOUR009.EVSA0407,DISP=SHR
+//JCLMOV   DD   DSN=GR.FOUR009.MOV1207,DISP=SHR
+//EXC1207  DD   DSN=GR.FOUR009.EXCSAIDA(+1),DISP=(NEW,CATLG,DELETE),
+//         LIKE=GR.FOUR009.MOV1207

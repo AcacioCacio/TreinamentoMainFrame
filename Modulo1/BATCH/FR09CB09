@@ -1,0 +1,55 @@
+       IDENTIFICATION                            DIVISION.              00010001
+       PROGRAM-ID.  FR09CB09.                                           00020001
+      *===================================================              00030001
+      *     AUTOR   : ACACIO JORGE                                      00040001
+      *     EMPRESA : FOURSYS                                           00050001
+      *     DATA    : 20/04/2022                                        00060001
+      *     OBJETIVO: EXERCICIO DE ADD                                  00070005
+      *===================================================              00080001
+      *ENVIROMENT                                DIVISION.              00081001
+      *===================================================              00081101
+       DATA                                      DIVISION.              00081201
+      *===================================================              00081301
+       WORKING-STORAGE                            SECTION.              00081401
+      *===================================================              00081501
+       01 WRK-ACCEPT.                                                   00081601
+          05 WRK-N1       PIC 99              VALUE ZEROS.              00081701
+          05 WRK-N2       PIC 99              VALUE ZEROS.              00081801
+          05 WRK-N3       PIC 99              VALUE ZEROS.              00081901
+          05 WRK-RES      PIC 999             VALUE ZEROS.              00082010
+      *===================================================              00082101
+       PROCEDURE                                 DIVISION.              00083001
+      *===================================================              00083101
+           ACCEPT WRK-ACCEPT  FROM   SYSIN.                             00083204
+      *=========== EXERCICIO 1 =============                            00083301
+            DISPLAY '========== EXERCICIO 1 ======='.                   00083408
+            ADD WRK-N1 WRK-N2        GIVING  WRK-RES.                   00083508
+            DISPLAY ' '                      WRK-N1.                    00083608
+            DISPLAY '+ '.                                               00083708
+            DISPLAY ' '                      WRK-N2.                    00083808
+            DISPLAY '---'.                                              00083908
+            DISPLAY                          WRK-RES.                   00084008
+      *=========== EXERCICIO 2 =============                            00084108
+            DISPLAY '========== EXERCICIO 2 ======='.                   00084208
+            MOVE 1                   TO      WRK-RES.                   00084308
+            ADD  WRK-N1 WRK-N2       TO      WRK-RES.                   00084408
+            DISPLAY ' '                      WRK-N1.                    00084508
+            DISPLAY '  '.                                               00084608
+            DISPLAY ' '                      WRK-N2.                    00084708
+            DISPLAY '+ 1'.                                              00084808
+            DISPLAY '-----'.                                            00084908
+            DISPLAY                          WRK-RES.                   00085008
+      *=========== EXERCICIO 3 =============                            00085101
+            DISPLAY '========== EXERCICIO 3 ======='.                   00085208
+            MOVE ZEROS                TO     WRK-RES.                   00085306
+            ADD  WRK-N1 WRK-N2 WRK-N3 TO     WRK-RES.                   00085406
+            ADD  10                   TO     WRK-RES.                   00085507
+            DISPLAY ' '                      WRK-N1.                    00085608
+            DISPLAY ' '                      WRK-N2.                    00085808
+            DISPLAY ' '                      WRK-N3.                    00085908
+            DISPLAY '+10'.                                              00086008
+            DISPLAY '-----'.                                            00086108
+            DISPLAY                          WRK-RES.                   00086208
+            DISPLAY '=========== FIM ==========='.                      00086308
+           STOP RUN.                                                    00087001
+

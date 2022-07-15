@@ -1,0 +1,21 @@
+       IDENTIFICATION                            DIVISION.              00010000
+       PROGRAM-ID.  FR09CB03.                                           00020000
+      *==========================================                       00030000
+      *     AUTOR   : ACACIO JORGE                                      00040000
+      *     EMPRESA : FOURSYS                                           00050000
+      *     DATA    : 19/04/2022                                        00060000
+      *     OBJETIVO: RECEBER DADOS DA SYSIN                            00070000
+      *==========================================                       00080000
+      *ENVIROMENT                                DIVISION.              00081000
+       DATA                                      DIVISION.              00082000
+       WORKING-STORAGE                            SECTION.              00082100
+       77 WRK-NOME          PIC X(015)       VALUE SPACES.              00082200
+       77 WKR-FILME         PIC X(030)       VALUE SPACES.              00082303
+       PROCEDURE                                 DIVISION.              00083000
+           ACCEPT WRK-NOME  FROM SYSIN.                                 00083102
+           ACCEPT WRK-FILME FROM SYSIN.                                 00083203
+           DISPLAY 'MEU TERCEIRO PROGRAMA - FR09CB03'.                  00084000
+           DISPLAY 'NOME INFORMADO....... - ' WRK-NOME.                 00084100
+           DISPLAY 'FILME INFORMADO...... - ' WKR-FILME.                00084203
+           STOP RUN.                                                    00085000
+

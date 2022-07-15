@@ -1,0 +1,31 @@
+       IDENTIFICATION                            DIVISION.              00010000
+       PROGRAM-ID.  FR09CB10.                                           00020001
+      *===================================================              00030000
+      *     AUTOR   : ACACIO JORGE                                      00040000
+      *     EMPRESA : FOURSYS                                           00050000
+      *     DATA    : 20/04/2022                                        00060000
+      *     OBJETIVO: EXEMPLO DE SUBTRACT                               00070001
+      *===================================================              00080000
+      *ENVIROMENT                                DIVISION.              00081000
+      *===================================================              00081100
+       DATA                                      DIVISION.              00081200
+      *===================================================              00081300
+       WORKING-STORAGE                            SECTION.              00081400
+      *===================================================              00081500
+       01 WRK-ACCEPT.                                                   00081600
+          05 WRK-N1       PIC 99              VALUE ZEROS.              00081700
+          05 WRK-N2       PIC 99              VALUE ZEROS.              00081800
+          05 WRK-RES      PIC 999             VALUE ZEROS.              00082000
+      *===================================================              00082100
+       PROCEDURE                                 DIVISION.              00082200
+      *===================================================              00082300
+           ACCEPT WRK-ACCEPT  FROM   SYSIN.                             00082400
+      *=========== EXEMPLO =============                                00082500
+            DISPLAY '========== EXEMPLO ======='.                       00082600
+            SUBTRACT WRK-N1 FROM WRK-N2.                                00082700
+            DISPLAY 'VALOR N1..: '           WRK-N1.                    00083100
+            DISPLAY 'VALOR N2..: '           WRK-N2.                    00083200
+            DISPLAY 'RESULTADO.: '           WRK-RES.                   00083300
+            DISPLAY '=========== FIM ==========='.                      00086300
+           STOP RUN.                                                    00086400
+

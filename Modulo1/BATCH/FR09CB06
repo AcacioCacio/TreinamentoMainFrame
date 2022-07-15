@@ -1,0 +1,28 @@
+       IDENTIFICATION                            DIVISION.              00010000
+       PROGRAM-ID.  FR09CB06.                                           00020005
+      *==========================================                       00030000
+      *     AUTOR   : ACACIO JORGE                                      00040000
+      *     EMPRESA : FOURSYS                                           00050000
+      *     DATA    : 20/04/2022                                        00060000
+      *     OBJETIVO: EXERCICIO FILLER                                  00070000
+      *==========================================                       00080000
+      *ENVIROMENT                                DIVISION.              00081000
+       DATA                                      DIVISION.              00082000
+       WORKING-STORAGE                            SECTION.              00082100
+       01 REGISTRO.                                                     00082200
+          05 WRK-CODIGO      PIC 9(05)        VALUE ZEROS.              00082302
+          05 WRK-NOME        PIC X(15)       VALUE SPACES.              00082400
+          05 FILLER          PIC X(10)       VALUE SPACES.              00082504
+          05 WRK-CARGO       PIC X(15)       VALUE SPACES.              00082601
+          05 FILLER          PIC X(10)       VALUE SPACES.              00082704
+       PROCEDURE                                 DIVISION.              00082900
+           ACCEPT REGISTRO FROM SYSIN.                                  00083001
+           DISPLAY '========================'                           00083101
+           DISPLAY 'CODIGO.: ' WRK-CODIGO                               00084001
+           DISPLAY '========================'                           00084101
+           DISPLAY 'NOME...: ' WRK-NOME                                 00084201
+           DISPLAY '========================'                           00084301
+           DISPLAY 'CARGO..: ' WRK-CARGO                                00084401
+           DISPLAY '========================'.                          00084501
+           STOP RUN.                                                    00084601
+

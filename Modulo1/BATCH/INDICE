@@ -1,0 +1,26 @@
+XX - USO DE VARIAVES COM NOMES IGUAIS PAIS DIFERENTES                   00001007
+01 - TESTE DE COMPILACAO                                                00010000
+02 - TESTE DE COMPILACAO VARIAVEL                                       00020002
+03 - RECEBER DADOS SYSIN                                                00030003
+04 - DESAFIO TESTE DE VARIAVEIS NIVEL                                   00040004
+05 - TESTE COM VARIAVEIS BINARIO                                        00050005
+06 - EXERCICIO FILLER                                                   00060008
+07 - EXERCICIO REDEFINES                                                00070008
+08 - USO DE ADD - AULA                                                  00080010
+09 - EXERCICIO ADD                                                      00090011
+10 - EXEMPLO DE SUBTRACT                                                00100012
+11 - EXERCICIO DE SUBTRACT                                              00110012
+20 - EXERCICIO DE DIVIDE                                                00120013
+21 - EXERCICIO DE MULTIPLY                                              00130013
+22 - EXERCICIO DE CONDICAO                                              00140014
+23 - MAIOR ENTRE OS TRES NUMEROS                                        00150015
+24 - EXERCICIO DE OPERADORES LOGICOS                                    00160017
+25 - APLICAR CONHECIMENTO DE EVALUATE                                   00170018
+26 - APLICAR CONHECIMENTO DE NIVEL 88                                   00180019
+27 - APLICAR CONHECIMENTO DE NIVEL 88 USO UNTIL                         00190019
+28 - OPEN/CLOSE ARQUIVO E MOSTRA SYSOUT DE ABERTURA E FECHAMENTO        00200019
+31 - RECEBER ARQUIVO E IMPRIMIR SYSOUT COM CAMPO MENOR                  00210019
+32 - RECEBER SYSIN E GRAVAR EM ARQUIVO                                  00220019
+33 - RECEBER PRODUTO E GRAVAR EM RELATORIO                              00230019
+FR09EX01 - ESPFUNC FUNCIONAL PROGRAMA FRXXEX01                          00240019
+

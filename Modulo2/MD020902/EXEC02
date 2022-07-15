@@ -1,0 +1,7 @@
+//FOUR009X JOB 'EXE COB',CLASS=C,MSGCLASS=X,NOTIFY=&SYSUID,TIME=(0,01)
+//**********************************************************************
+//* EXECUTAR PROGRAMA MD020902                                         *
+//**********************************************************************
+//EXECUTA  EXEC PGM=MD020902,PARM='L000900333'
+//STEPLIB  DD   DSN=GR.GERAL.LOADLIB,DISP=SHR
+//EVSA0407 DD   DSN=GR.FOUR009.EVSA0407,DISP=SHR
